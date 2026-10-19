@@ -3,8 +3,7 @@ title HackingToolkit3DS
 mode con cols=100 lines=30
 IF EXIST "%PROGRAMFILES(x86)%" (SET CtrTool=CtrTool64.exe) ELSE (SET CtrTool=CtrTool32.exe)
 IF EXIST "%PROGRAMFILES(x86)%" (SET MakeRom=MakeRom64.exe) ELSE (SET MakeRom=MakeRom32.exe)
-IF EXIST "%PROGRAMFILES%\HackingToolkit3DS\*.*" GOTO TitleMenu
-IF NOT EXIST "%PROGRAMFILES%\HackingToolkit3DS\*.*" GOTO NoInstalledSetup
+GOTO TitleMenu
 
 :NoInstalledSetup
 echo set WshShell = WScript.CreateObject("WScript.Shell") > %tmp%\tmp.vbs
